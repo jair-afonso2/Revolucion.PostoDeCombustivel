@@ -21,14 +21,28 @@ namespace Dominio
 
         public string Cadastro()
         {
-            string composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque" + estoque;
             StreamWriter arquivo = new StreamWriter("Produtos.csv",true);
-            if(!File.Exists("Produtos.csv"))
+            string msg = "";
+            string composicao = "";
+            try
             {
-                 arquivo.WriteLine("Nome do Produto;Preço;Estoque");
+                composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque" + estoque;
+                if(arquivo==null)
+                {
+                    arquivo.WriteLine("Nome do Produto;Preço;Estoque");
+                }
+                arquivo.WriteLine(produto + ";" + preco + ";" + estoque);
+                msg = "Produto salvo com sucesso!";
             }
-            arquivo.WriteLine(produto + ";" + preco + ";" + estoque);
-            arquivo.Close();
+            catch(Exception ex)
+            {
+                msg = "Erro ao tentar salvar o arquivo "+ ex.Message;
+            }
+            finally
+            {
+                arquivo.Close();
+            }
+            Console.WriteLine(msg);
             return composicao;
         }
 
@@ -36,18 +50,34 @@ namespace Dominio
         {
             StreamReader arquivo = new StreamReader("Produtos.csv", Encoding.Default);
             string linha = "";
-            while((linha=arquivo.ReadLine())!=null)
+            string msg = "";
+            string composicao = "";
+            try
             {
-                string[] dados=linha.Split(';');
-                if(dados[0]==produto)
+                while((linha=arquivo.ReadLine())!=null)
                 {
-                    produto = dados[0];
-                    preco = Convert.ToDouble(dados[1]);
-                    estoque = Convert.ToInt16(dados[2]);
-                    break;
+                    string[] dados=linha.Split(';');
+                    if(dados[0]==produto)
+                    {
+                        produto = dados[0];
+                        preco = Convert.ToDouble(dados[1]);
+                        estoque = Convert.ToInt16(dados[2]);
+                        msg = "Pesquisa concluída com sucesso!";
+                        break;
+                    }
                 }
             }
-            string composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque" + estoque;
+            catch(Exception ex)
+            {
+                msg = "Erro na pesquisa "+ ex.Message;
+            }
+            finally
+            {
+                arquivo.Close();
+            }
+            
+            composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque" + estoque;
+            Console.WriteLine(msg);
             return composicao;
         }
     }
