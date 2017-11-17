@@ -196,6 +196,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dominio.dll": {}
+        }
       }
     }
   },
@@ -656,31 +666,37 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Dominio/1.0.0": {
+      "type": "project",
+      "path": "../Dominio/Dominio.csproj",
+      "msbuildProject": "../Dominio/Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Dominio >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\40809588897\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/caiocsampaio/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\40809588897\\Desktop\\Programar\\Semana7\\Revolucion.PostoDeCombustivel\\Terminal\\Terminal.csproj",
+      "projectUniqueName": "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Terminal/Terminal.csproj",
       "projectName": "Terminal",
-      "projectPath": "c:\\Users\\40809588897\\Desktop\\Programar\\Semana7\\Revolucion.PostoDeCombustivel\\Terminal\\Terminal.csproj",
-      "packagesPath": "C:\\Users\\40809588897\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\40809588897\\Desktop\\Programar\\Semana7\\Revolucion.PostoDeCombustivel\\Terminal\\obj\\",
+      "projectPath": "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Terminal/Terminal.csproj",
+      "packagesPath": "/home/caiocsampaio/.nuget/packages/",
+      "outputPath": "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Terminal/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\40809588897\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/caiocsampaio/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -690,7 +706,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Dominio/Dominio.csproj": {
+              "projectPath": "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Dominio/Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
