@@ -8,7 +8,6 @@ namespace Terminal
         static void Main(string[] args)
         {
             Console.WriteLine("Revolucion - Postos de Combustivel");
-
             int opcao = 0;
             do
             {
