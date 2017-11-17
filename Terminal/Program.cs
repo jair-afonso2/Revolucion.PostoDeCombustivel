@@ -7,10 +7,6 @@ namespace Terminal
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            Console.WriteLine("Hello World!");
-            
-=======
             Console.WriteLine("Revolucion - Postos de Combustivel");
 
             int opcao = 0;
@@ -131,7 +127,6 @@ namespace Terminal
                 }
 
             } while (opcao != 9);
->>>>>>> 477b3f54e254cb08bd1d9c15fce3058caf6bcfc3
         }
     }
 }

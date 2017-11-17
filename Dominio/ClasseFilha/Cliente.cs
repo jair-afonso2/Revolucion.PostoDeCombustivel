@@ -54,7 +54,6 @@ namespace Dominio.ClasseFilha
         public string Consulta()
         {
             using(var leitor = new StreamReader("clientes.csv", true)){
-                string msg = "";
                 string composicao = "";
                 string linha = "";
                 try{
@@ -66,16 +65,18 @@ namespace Dominio.ClasseFilha
                             this.Telefone = cliente[3];
                             this.endereco = ConverterEndereco(cliente[4]);                        
                             }
+                    composicao = "CNPJ: " + this.Cnpj + 
+                                        "\nRazão Social: " + this.RazaoSocial +
+                                        "\nEmail: " + this.Email +
+                                        "\nTelefone: " + this.Telefone + 
+                                        "\nEndereço: " + cliente[4];
                     }
                 }
                 catch(Exception ex){
                     throw new Exception("Erro ao procurar cliente." + ex.Message);
                 }
-                finally{
-                    leitor.Close();
-                }
+            return composicao;
             }
-            throw new System.NotImplementedException();
         }
     }
 }
