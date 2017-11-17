@@ -21,5 +21,9 @@ namespace Dominio
             this.estado = estado;
             this.cep = cep;
         }
+        public string EscreveEndereco(){
+            string str = logradouro + ", " + numero + ", " + complemento + ", " + bairro + ", " + cidade + ", " + estado + ", " + cep;
+            return str;
+        }
     }
 }

@@ -28,7 +28,7 @@ namespace Dominio.ClasseFilha
                     cl_arquivo.WriteLine("CNPJ;RazãoSocial;Email;Telefone;Endereço");
                 }
                 linha_cliente = this.Cnpj + ";" + this.RazaoSocial + ";" + 
-                                    this.Email + ";" + this.Telefone + ";" + this.endereco;
+                                    this.Email + ";" + this.Telefone + ";" + this.endereco.EscreveEndereco();
 
                 cl_arquivo.WriteLine(linha_cliente);
 
