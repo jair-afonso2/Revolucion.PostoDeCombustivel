@@ -183,11 +183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\39694603870\\Backend\\Projetos\\Revolucion.PostoDeCombustivel\\Dominio\\Dominio.csproj",
+      "projectUniqueName": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
-      "projectPath": "c:\\Users\\39694603870\\Backend\\Projetos\\Revolucion.PostoDeCombustivel\\Dominio\\Dominio.csproj",
-      "packagesPath": "C:\\Users\\39694603870\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\39694603870\\Backend\\Projetos\\Revolucion.PostoDeCombustivel\\Dominio\\obj\\",
+      "projectPath": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Dominio\\Dominio.csproj",
+      "packagesPath": "C:\\Users\\37795527876\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

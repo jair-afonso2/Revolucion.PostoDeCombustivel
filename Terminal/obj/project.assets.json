@@ -196,6 +196,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dominio.dll": {}
+        }
       }
     }
   },
@@ -656,10 +666,16 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Dominio/1.0.0": {
+      "type": "project",
+      "path": "../Dominio/Dominio.csproj",
+      "msbuildProject": "../Dominio/Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Dominio >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -670,11 +686,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Terminal\\Terminal.csproj",
+      "projectUniqueName": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Terminal\\Terminal.csproj",
       "projectName": "Terminal",
-      "projectPath": "C:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Terminal\\Terminal.csproj",
+      "projectPath": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Terminal\\Terminal.csproj",
       "packagesPath": "C:\\Users\\37795527876\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Terminal\\obj\\",
+      "outputPath": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Terminal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -690,7 +706,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Dominio\\Dominio.csproj": {
+              "projectPath": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Dominio\\Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
