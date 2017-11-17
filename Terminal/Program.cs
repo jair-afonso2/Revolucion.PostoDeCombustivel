@@ -12,7 +12,7 @@ namespace Terminal
             int opcao = 0;
             do
             {
-                Console.WriteLine("\nDigite a opção:\n");
+                Console.WriteLine("\nDigite a opção:");
                 System.Console.WriteLine("1 - Cadastrar");
                 System.Console.WriteLine("2 - Realizar Venda");
                 System.Console.WriteLine("3 - Consultar");
@@ -24,7 +24,6 @@ namespace Terminal
                 {
                     case 1:
                         int opcaoCadastrar = 0;
-
                         do
                         {
 
@@ -124,18 +123,23 @@ namespace Terminal
                         do
                         {
 
-                            Console.WriteLine("\nConsultar:\n");
+                            Console.WriteLine("\nConsultar:");
                             System.Console.WriteLine("1 - Histórico de Vendas");
                             System.Console.WriteLine("2 - Clientes");
                             System.Console.WriteLine("3 - Fornecedores");
                             System.Console.WriteLine("9 - Voltar\n");
 
-                            opcao = Convert.ToInt16(Console.ReadLine());
+                            opcaoConsultar = Convert.ToInt16(Console.ReadLine());
+                            string resultado = "";
 
                             switch (opcaoConsultar)
                             {
                                 case 1:
-
+                                    System.Console.Write("\nData: ");
+                                    DateTime datas = Convert.ToDateTime(Console.ReadLine());
+                                    Vendas ObjVenda = new Vendas();
+                                    resultado = ObjVenda.Consulta(datas);
+                                    System.Console.WriteLine("\n" + resultado);  
                                     break;
 
                                 case 2:
