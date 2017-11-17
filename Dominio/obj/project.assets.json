@@ -25,6 +25,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Util/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Util.dll": {}
+        }
       }
     }
   },
@@ -169,11 +179,17 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Util/1.0.0": {
+      "type": "project",
+      "path": "Util/Util.csproj",
+      "msbuildProject": "Util/Util.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.0"
+      "NETStandard.Library >= 2.0.0",
+      "Util >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -203,7 +219,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Dominio/Util/Util.csproj": {
+              "projectPath": "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Dominio/Util/Util.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

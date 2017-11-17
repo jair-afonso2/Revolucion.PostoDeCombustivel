@@ -53,8 +53,31 @@ namespace Dominio.ClasseFilha
 
         public string Consulta()
         {
-            
+            using(var leitor = new StreamReader("clientes.csv", true)){
+                string msg = "";
+                string composicao = "";
+                string linha = "";
+                try{
+                    while((linha = leitor.ReadLine()) != null){
+                        string[] cliente = linha.Split(';');
+                        if(cliente[0] == this.Cnpj){
+                            this.Email = cliente[2];
+                            this.RazaoSocial = cliente[1];
+                            this.Telefone = cliente[3];
+                            this.endereco = ConverterEndereco(cliente[4]);                        
+                            }
+                    }
+                }
+                catch{
+
+                }
+            }
             throw new System.NotImplementedException();
+        }
+
+        public Endereco ConverterEndereco(string end_str){
+            string[] array = end_str.Split(',');
+            return new Endereco(array[0], array[1], array[2], array[3], array[4], array[5], array[6]);
         }
     }
 }
