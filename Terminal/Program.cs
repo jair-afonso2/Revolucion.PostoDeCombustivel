@@ -43,7 +43,7 @@ namespace Terminal
                                 System.Console.Write("CNPJ: ");
                                 string cnpj = Console.ReadLine();
                                 System.Console.Write("Email: ");
-                                string email = Console.ReadLine();
+                                string mail = Console.ReadLine();
                                 System.Console.Write("Telefone: ");
                                 string telefone = Console.ReadLine();
                                 System.Console.Write("Logradouro: ");
@@ -66,12 +66,12 @@ namespace Terminal
                                 switch (opcaoCadastrar)
                                 {
                                     case 1:
-                                        Cliente cliente = new Cliente(razaosocial, cnpj, email, telefone, endereco);
-                                        cliente.Cadastro();
+                                        Cliente Nomecliente = new Cliente(razaosocial, cnpj, mail, telefone, endereco);
+                                        Nomecliente.Cadastro();
                                         break;
 
                                     case 2:
-                                        Fornecedor fornecedor = new Fornecedor(razaosocial, cnpj, email, telefone, endereco);
+                                        Fornecedor fornecedor = new Fornecedor(razaosocial, cnpj, mail, telefone, endereco);
                                         fornecedor.Cadastro();
                                         break;
                                 }
@@ -86,8 +86,8 @@ namespace Terminal
                                     System.Console.Write("Preço: ");
                                     double preco = Convert.ToDouble(Console.ReadLine());
 
-                                    Produtos produto = new Produtos(NomeProduto, preco);
-                                    produto.Cadastro();
+                                    Produtos Objproduto = new Produtos(NomeProduto, preco);
+                                    Objproduto.Cadastro();
                                     break;
 
                                 case 9:
@@ -103,6 +103,19 @@ namespace Terminal
                         break;
 
                     case 2:
+                        System.Console.Write("\nProduto: ");
+                        string produto = Console.ReadLine();
+                        System.Console.Write("Volume: ");
+                        double volume = Convert.ToDouble(Console.ReadLine());
+                        System.Console.Write("Valor: ");
+                        double valor = Convert.ToDouble(Console.ReadLine());
+                        System.Console.Write("Data (dd/mm/aaaa hh:mm:ss): ");
+                        DateTime data = Convert.ToDateTime(Console.ReadLine());
+                        System.Console.Write("Cliente: ");
+                        string cliente = Console.ReadLine();
+
+                        Vendas venda = new Vendas(produto, volume, valor, data, cliente);
+                        venda.Cadastro();
                         break;
 
                     case 3:
@@ -122,6 +135,7 @@ namespace Terminal
                             switch (opcaoConsultar)
                             {
                                 case 1:
+
                                     break;
 
                                 case 2:
