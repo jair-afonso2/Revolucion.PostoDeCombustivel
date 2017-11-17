@@ -30,7 +30,11 @@ namespace Dominio
             {
                 arquivo = new StreamWriter("Vendas.csv", true);
                 arquivo.WriteLine(Produto + ";" + Volume + ";" + Valor + ";" + Data + ";" + Cliente);
-                efetuado = "Produto: " + Produto + "\n" + "Volume: " + Volume  + "\n" + "Valor: " + Valor + "\n" + "Data do cadastro: " + Data + "\n" + "Cliente: " + Cliente;
+                efetuado = "Produto: " + Produto +
+                           "\nVolume: " + Volume +
+                           "\nValor: " + Valor +
+                           "\nData do cadastro: " + Data +
+                           "\nCliente: " + Cliente;
             }
             catch (Exception ex)
             {
@@ -54,7 +58,11 @@ namespace Dominio
                 while((linha = ler.ReadLine()) != null){
                     string[] dados = linha.Split(';');
                     if(dados[0].ToUpper() == Produto.ToUpper()){
-                        resultado = linha;
+                        resultado = "Produto: " + linha[0] +
+                                    "\nVolume: " + linha[1] +
+                                    "\nValor: " + linha[2] +
+                                    "\nData do cadastro: " + linha[3] +
+                                    "\nCliente: " + linha[4] ;
                         break;
                     }
                 }
