@@ -1,5 +1,6 @@
 ﻿using System;
 using Dominio;
+using Dominio.ClasseFilha;
 
 namespace Terminal
 {
@@ -33,12 +34,11 @@ namespace Terminal
                             System.Console.WriteLine("3 - Produto");
                             System.Console.WriteLine("9 - Voltar\n");
 
-                            opcao = Convert.ToInt16(Console.ReadLine());
+                            opcaoCadastrar = Convert.ToInt16(Console.ReadLine());
 
                             switch (opcaoCadastrar)
                             {
                                 case 1:
-                                    //bool cadastrosucesso = false;
 
                                     System.Console.Write("\nRazão Social: ");
                                     string razaosocial = Console.ReadLine();
@@ -48,15 +48,25 @@ namespace Terminal
                                     string email = Console.ReadLine();
                                     System.Console.Write("Telefone: ");
                                     string telefone = Console.ReadLine();
-                                    Endereco endereco = new Endereco();
+                                    System.Console.Write("Logradouro: ");
+                                    string EndLogradouro = Console.ReadLine();
+                                    System.Console.Write("Numero: ");
+                                    string EndNumero = Console.ReadLine();
+                                    System.Console.Write("Complemento: ");
+                                    string EndComplemento = Console.ReadLine();
+                                    System.Console.Write("Bairro: ");
+                                    string EndBairro = Console.ReadLine();
+                                    System.Console.Write("Cidade: ");
+                                    string EndCidade = Console.ReadLine();
+                                    System.Console.Write("Estado: ");
+                                    string EndEstado = Console.ReadLine();
+                                    System.Console.Write("CEP: ");
+                                    string EndCep = Console.ReadLine();
 
-                                    System.Console.Write("Data (dd/mm/aaaa): ");
+                                    Endereco endereco = new Endereco(EndLogradouro, EndNumero, EndComplemento, EndBairro, EndCidade, EndEstado, EndCep);
+                                    Cliente cliente = new Cliente(razaosocial, cnpj, email, telefone, endereco);
 
-                                    DateTime data = Convert.ToDateTime(Console.ReadLine());
-
-                                    System.Console.Write("Classificação: ");
-
-                                    int classificacao = Convert.ToInt16(Console.ReadLine());
+                                    cliente.Cadastro();
                                     break;
 
                                 case 2:

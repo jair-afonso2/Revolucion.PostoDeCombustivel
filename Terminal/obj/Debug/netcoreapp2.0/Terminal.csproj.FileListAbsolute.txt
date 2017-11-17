@@ -10,3 +10,15 @@ c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\obj\Debug\ne
 c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\obj\Debug\netcoreapp2.0\Terminal.AssemblyInfo.cs
 c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\obj\Debug\netcoreapp2.0\Terminal.dll
 c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\obj\Debug\netcoreapp2.0\Terminal.pdb
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\bin\Debug\netcoreapp2.0\Terminal.deps.json
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\bin\Debug\netcoreapp2.0\Terminal.runtimeconfig.json
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\bin\Debug\netcoreapp2.0\Terminal.runtimeconfig.dev.json
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\bin\Debug\netcoreapp2.0\Terminal.dll
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\bin\Debug\netcoreapp2.0\Terminal.pdb
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\bin\Debug\netcoreapp2.0\Dominio.dll
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\bin\Debug\netcoreapp2.0\Dominio.pdb
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\obj\Debug\netcoreapp2.0\Terminal.csproj.CoreCompileInputs.cache
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\obj\Debug\netcoreapp2.0\Terminal.AssemblyInfoInputs.cache
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\obj\Debug\netcoreapp2.0\Terminal.AssemblyInfo.cs
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\obj\Debug\netcoreapp2.0\Terminal.dll
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\terminal\obj\Debug\netcoreapp2.0\Terminal.pdb
