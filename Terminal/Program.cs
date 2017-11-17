@@ -36,44 +36,58 @@ namespace Terminal
 
                             opcaoCadastrar = Convert.ToInt16(Console.ReadLine());
 
+                            if (opcaoCadastrar == 1 || opcaoCadastrar == 2)
+                            {
+                                System.Console.Write("\nRazão Social: ");
+                                string razaosocial = Console.ReadLine();
+                                System.Console.Write("CNPJ: ");
+                                string cnpj = Console.ReadLine();
+                                System.Console.Write("Email: ");
+                                string email = Console.ReadLine();
+                                System.Console.Write("Telefone: ");
+                                string telefone = Console.ReadLine();
+                                System.Console.Write("Logradouro: ");
+                                string EndLogradouro = Console.ReadLine();
+                                System.Console.Write("Numero: ");
+                                string EndNumero = Console.ReadLine();
+                                System.Console.Write("Complemento: ");
+                                string EndComplemento = Console.ReadLine();
+                                System.Console.Write("Bairro: ");
+                                string EndBairro = Console.ReadLine();
+                                System.Console.Write("Cidade: ");
+                                string EndCidade = Console.ReadLine();
+                                System.Console.Write("Estado: ");
+                                string EndEstado = Console.ReadLine();
+                                System.Console.Write("CEP: ");
+                                string EndCep = Console.ReadLine();
+
+                                Endereco endereco = new Endereco(EndLogradouro, EndNumero, EndComplemento, EndBairro, EndCidade, EndEstado, EndCep);
+
+                                switch (opcaoCadastrar)
+                                {
+                                    case 1:
+                                        Cliente cliente = new Cliente(razaosocial, cnpj, email, telefone, endereco);
+                                        cliente.Cadastro();
+                                        break;
+
+                                    case 2:
+                                        Fornecedor fornecedor = new Fornecedor(razaosocial, cnpj, email, telefone, endereco);
+                                        fornecedor.Cadastro();
+                                        break;
+                                }
+                            }
+
+
                             switch (opcaoCadastrar)
                             {
-                                case 1:
-
-                                    System.Console.Write("\nRazão Social: ");
-                                    string razaosocial = Console.ReadLine();
-                                    System.Console.Write("CNPJ: ");
-                                    string cnpj = Console.ReadLine();
-                                    System.Console.Write("Email: ");
-                                    string email = Console.ReadLine();
-                                    System.Console.Write("Telefone: ");
-                                    string telefone = Console.ReadLine();
-                                    System.Console.Write("Logradouro: ");
-                                    string EndLogradouro = Console.ReadLine();
-                                    System.Console.Write("Numero: ");
-                                    string EndNumero = Console.ReadLine();
-                                    System.Console.Write("Complemento: ");
-                                    string EndComplemento = Console.ReadLine();
-                                    System.Console.Write("Bairro: ");
-                                    string EndBairro = Console.ReadLine();
-                                    System.Console.Write("Cidade: ");
-                                    string EndCidade = Console.ReadLine();
-                                    System.Console.Write("Estado: ");
-                                    string EndEstado = Console.ReadLine();
-                                    System.Console.Write("CEP: ");
-                                    string EndCep = Console.ReadLine();
-
-                                    Endereco endereco = new Endereco(EndLogradouro, EndNumero, EndComplemento, EndBairro, EndCidade, EndEstado, EndCep);
-                                    Cliente cliente = new Cliente(razaosocial, cnpj, email, telefone, endereco);
-
-                                    cliente.Cadastro();
-                                    break;
-
-                                case 2:
-                                    break;
-
                                 case 3:
+                                    System.Console.Write("\nProduto: ");
+                                    string NomeProduto = Console.ReadLine();
+                                    System.Console.Write("Preço: ");
+                                    double preco = Convert.ToDouble(Console.ReadLine());
 
+                                    Produtos produto = new Produtos(NomeProduto, preco);
+                                    produto.Cadastro();
                                     break;
 
                                 case 9:
