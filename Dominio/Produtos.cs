@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 
@@ -26,7 +26,7 @@ namespace Dominio
             string composicao = "";
             try
             {
-                composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque" + estoque;
+                composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque: " + estoque;
                 if(arquivo==null)
                 {
                     arquivo.WriteLine("Nome do Produto;Preço;Estoque");
@@ -76,7 +76,7 @@ namespace Dominio
                 arquivo.Close();
             }
             
-            composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque" + estoque;
+            composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque: " + estoque;
             Console.WriteLine(msg);
             return composicao;
         }
