@@ -1,0 +1,12 @@
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\bin\Debug\netcoreapp2.0\Terminal.deps.json
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\bin\Debug\netcoreapp2.0\Terminal.runtimeconfig.json
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\bin\Debug\netcoreapp2.0\Terminal.runtimeconfig.dev.json
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\bin\Debug\netcoreapp2.0\Terminal.dll
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\bin\Debug\netcoreapp2.0\Terminal.pdb
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\bin\Debug\netcoreapp2.0\Dominio.dll
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\bin\Debug\netcoreapp2.0\Dominio.pdb
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\obj\Debug\netcoreapp2.0\Terminal.csproj.CoreCompileInputs.cache
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\obj\Debug\netcoreapp2.0\Terminal.AssemblyInfoInputs.cache
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\obj\Debug\netcoreapp2.0\Terminal.AssemblyInfo.cs
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\obj\Debug\netcoreapp2.0\Terminal.dll
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Terminal\obj\Debug\netcoreapp2.0\Terminal.pdb

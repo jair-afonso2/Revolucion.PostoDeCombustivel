@@ -38,7 +38,7 @@ namespace Terminal
                             switch (opcaoCadastrar)
                             {
                                 case 1:
-                                    bool cadastrosucesso = false;
+                                    //bool cadastrosucesso = false;
 
                                     System.Console.Write("\nRazão Social: ");
                                     string razaosocial = Console.ReadLine();

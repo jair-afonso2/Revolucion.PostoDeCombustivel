@@ -2,17 +2,8 @@ using System;
 
 namespace Dominio
 {
-    public class PJ
+    public abstract class PJ
     {
-        public PJ(string razaoSocial, string cnpj, Endereco endereco, string email, string telefone)
-        {
-            this.RazaoSocial = razaoSocial;
-            this.Cnpj = cnpj;
-            this.endereco = endereco;
-            this.Email = email;
-            this.Telefone = telefone;
-
-        }
         public string RazaoSocial { get; set; }
         public string Cnpj { get; set; }
         public Endereco endereco { get; set; }
@@ -21,7 +12,6 @@ namespace Dominio
 
         public bool VerificarCnpj(string cnpj)
         {
-
             //Retira os caracteres especiais do CNPJ
             cnpj = cnpj.Trim().Replace(".", "").Replace("-", "");
 
