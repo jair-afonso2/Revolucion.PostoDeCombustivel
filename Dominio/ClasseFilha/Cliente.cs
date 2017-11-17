@@ -68,16 +68,14 @@ namespace Dominio.ClasseFilha
                             }
                     }
                 }
-                catch{
-
+                catch(Exception ex){
+                    throw new Exception("Erro ao procurar cliente." + ex.Message);
+                }
+                finally{
+                    leitor.Close();
                 }
             }
             throw new System.NotImplementedException();
-        }
-
-        public Endereco ConverterEndereco(string end_str){
-            string[] array = end_str.Split(',');
-            return new Endereco(array[0], array[1], array[2], array[3], array[4], array[5], array[6]);
         }
     }
 }

@@ -1,8 +1,18 @@
 using System;
+
 namespace Dominio
 {
     public class PJ
     {
+        public PJ(string razaoSocial, string cnpj, Endereco endereco, string email, string telefone)
+        {
+            this.RazaoSocial = razaoSocial;
+            this.Cnpj = cnpj;
+            this.endereco = endereco;
+            this.Email = email;
+            this.Telefone = telefone;
+
+        }
         public string RazaoSocial { get; set; }
         public string Cnpj { get; set; }
         public Endereco endereco { get; set; }
@@ -77,6 +87,10 @@ namespace Dominio
             //Verifica se o digito é igual aos do cnpj, caso seja retorna true caso contrário retorna false
             return cnpj.EndsWith(digito);
         }
-
+        public Endereco ConverterEndereco(string end_str)
+        {
+            string[] array = end_str.Split(',');
+            return new Endereco(array[0], array[1], array[2], array[3], array[4], array[5], array[6]);
+        }
     }
 }

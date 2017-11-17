@@ -680,23 +680,23 @@
     ]
   },
   "packageFolders": {
-    "/home/caiocsampaio/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\37795527876\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Terminal/Terminal.csproj",
+      "projectUniqueName": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Terminal\\Terminal.csproj",
       "projectName": "Terminal",
-      "projectPath": "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Terminal/Terminal.csproj",
-      "packagesPath": "/home/caiocsampaio/.nuget/packages/",
-      "outputPath": "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Terminal/obj/",
+      "projectPath": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Terminal\\Terminal.csproj",
+      "packagesPath": "C:\\Users\\37795527876\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Terminal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/caiocsampaio/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\37795527876\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -707,8 +707,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Dominio/Dominio.csproj": {
-              "projectPath": "/home/caiocsampaio/Codexp/Revolucion.PostoDeCombustivel/Dominio/Dominio.csproj"
+            "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Dominio\\Dominio.csproj": {
+              "projectPath": "c:\\Users\\37795527876\\backend\\Revolucion.PostoDeCombustivel\\Dominio\\Dominio.csproj"
             }
           }
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using Dominio;
 
 namespace Terminal
 {
@@ -7,6 +8,7 @@ namespace Terminal
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            
         }
     }
 }
