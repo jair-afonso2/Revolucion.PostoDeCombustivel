@@ -52,34 +52,34 @@ namespace Dominio
             return efetuado;
         }
 
-        public string Consulta()
-        {
-            string resultado = "Título não encontrado.";
-            StreamReader ler = null;
-            try
-            {
-                ler = new StreamReader("Vendas.csv", Encoding.Default);
-                string linha = "";
-                while((linha = ler.ReadLine()) != null){
-                    string[] dados = linha.Split(';');
-                    if(dados[0].ToUpper() == Produto.ToUpper()){
-                        resultado = "Produto: " + dados[0] +
-                                    "\nVolume: " + dados[1] +
-                                    "\nValor: " + dados[2] +
-                                    "\nData do cadastro: " + dados[3] +
-                                    "\nCliente: " + dados[4];
-                        break;
-                    }
-                }
-            }
-            catch(Exception ex){
-                resultado = "Erro ao tentar ler o arquivo." + ex.Message;
-            }
-            finally{
-                ler.Close();
-            }
-            return resultado;
-        }
+        // public string Consulta()
+        // {
+        //     string resultado = "Título não encontrado.";
+        //     StreamReader ler = null;
+        //     try
+        //     {
+        //         ler = new StreamReader("Vendas.csv", Encoding.Default);
+        //         string linha = "";
+        //         while((linha = ler.ReadLine()) != null){
+        //             string[] dados = linha.Split(';');
+        //             if(dados[0].ToUpper() == Produto.ToUpper()){
+        //                 resultado = "Produto: " + dados[0] +
+        //                             "\nVolume: " + dados[1] +
+        //                             "\nValor: " + dados[2] +
+        //                             "\nData do cadastro: " + dados[3] +
+        //                             "\nCliente: " + dados[4];
+        //                 break;
+        //             }
+        //         }
+        //     }
+        //     catch(Exception ex){
+        //         resultado = "Erro ao tentar ler o arquivo." + ex.Message;
+        //     }
+        //     finally{
+        //         ler.Close();
+        //     }
+        //     return resultado;
+        // }
         public List<string[]> Consulta(string nome){
             List<string[]> resultado = new List<string[]>();
             StreamReader ler = null;
@@ -100,6 +100,11 @@ namespace Dominio
                 ler.Close();
             }
             return resultado;
+        }
+
+        public string Consulta()
+        {
+            throw new NotImplementedException();
         }
     }   
 }

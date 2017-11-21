@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -51,32 +52,54 @@ namespace Dominio.ClasseFilha
         }
     
 
-        public string Consulta()
-        {
-            using(var leitor = new StreamReader("Fornecedores.csv", true)){
-                string composicao = "";
+        // public string Consulta()
+        // {
+        //     using(var leitor = new StreamReader("Fornecedores.csv", true)){
+        //         string composicao = "";
+        //         string linha = "";
+        //         try{
+        //             while((linha = leitor.ReadLine()) != null){
+        //                 string[] fornecedor = linha.Split(';');
+        //                 if(fornecedor[0] == this.Cnpj){
+        //                     this.Email = fornecedor[2];
+        //                     this.RazaoSocial = fornecedor[1];
+        //                     this.Telefone = fornecedor[3];
+        //                     this.endereco = ConverterEndereco(fornecedor[4]);                        
+        //                     }
+        //             composicao = "CNPJ: " + this.Cnpj + 
+        //                                 "\nRazão Social: " + this.RazaoSocial +
+        //                                 "\nEmail: " + this.Email +
+        //                                 "\nTelefone: " + this.Telefone + 
+        //                                 "\nEndereço: " + fornecedor[4];
+        //             }
+        //         }
+        //         catch(Exception ex){
+        //             throw new Exception("Erro ao procurar fornecedor." + ex.Message);
+        //         }
+        //     return composicao;
+        //     }
+        // }
+
+        public List<string[]> Consulta(string nome){
+            List<string[]> resultado = new List<string[]>();
+            StreamReader ler = null;
+            try{
+                ler = new StreamReader("Fornecedores.csv", Encoding.Default);
                 string linha = "";
-                try{
-                    while((linha = leitor.ReadLine()) != null){
-                        string[] fornecedor = linha.Split(';');
-                        if(fornecedor[0] == this.Cnpj){
-                            this.Email = fornecedor[2];
-                            this.RazaoSocial = fornecedor[1];
-                            this.Telefone = fornecedor[3];
-                            this.endereco = ConverterEndereco(fornecedor[4]);                        
-                            }
-                    composicao = "CNPJ: " + this.Cnpj + 
-                                        "\nRazão Social: " + this.RazaoSocial +
-                                        "\nEmail: " + this.Email +
-                                        "\nTelefone: " + this.Telefone + 
-                                        "\nEndereço: " + fornecedor[4];
+                while((linha = ler.ReadLine()) != null){
+                    string[] dados = linha.Split(';');
+                    if(dados[1] == nome){
+                        resultado.Add(dados);
                     }
                 }
-                catch(Exception ex){
-                    throw new Exception("Erro ao procurar fornecedor." + ex.Message);
-                }
-            return composicao;
             }
+            catch(Exception ex){
+                string erro = "Erro ao tentar ler o arquivo." + ex.Message;
+            }
+            finally{
+                ler.Close();
+            }
+            return resultado;
         }
     }
 }

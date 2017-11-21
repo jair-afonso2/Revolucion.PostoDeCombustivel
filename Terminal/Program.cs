@@ -74,6 +74,7 @@ namespace Terminal
                                         Fornecedor fornecedor = new Fornecedor(razaosocial, cnpj, mail, telefone, endereco);
                                         fornecedor.Cadastro();
                                         break;
+
                                 }
                             }
 
@@ -93,9 +94,6 @@ namespace Terminal
                                 case 9:
                                     break;
 
-                                default:
-                                    System.Console.WriteLine("Opção inválida.\n");
-                                    break;
                             }
 
                         } while (opcaoCadastrar != 9);
@@ -135,25 +133,60 @@ namespace Terminal
                             switch (opcaoConsultar)
                             {
                                 case 1:
-                                    System.Console.Write("\nNome: ");
-                                    string nome = (Console.ReadLine());
+                                    System.Console.Write("\nNome do cliente: ");
+                                    string nome_venda = (Console.ReadLine());
                                     Vendas ObjVenda = new Vendas();
-                                    List<string[]> resultado_list = ObjVenda.Consulta(nome);
-                                    foreach(string[] item in resultado_list){
-                                        Console.WriteLine("Produto: " + item[0] +
-                                            "\nVolume: " + item[1] +
-                                            "\nValor: " + item[2] +
-                                            "\nData do cadastro: " + item[3] +
-                                            "\nCliente: " + item[4] + "\n");
-                                    }
-                                    
-                                    //System.Console.WriteLine("\n" + resultado);
+                                    List<string[]> venda_list = ObjVenda.Consulta(nome_venda);
+                                        if(venda_list.Count != 0){
+                                            foreach(string[] item in venda_list){
+                                            Console.WriteLine("Produto: " + item[0] +
+                                                "\nVolume: " + item[1] +
+                                                "\nValor: " + item[2] +
+                                                "\nData do cadastro: " + item[3] +
+                                                "\nCliente: " + item[4] + "\n");
+                                            }
+                                        }
+                                        else{
+                                            Console.WriteLine("\n\nNão há histórico de vendas para o cliente pesquisado.");
+                                        }
                                     break;
 
                                 case 2:
+                                    System.Console.Write("\nNome do cliente: ");
+                                    string nome_cliente = (Console.ReadLine());
+                                    Cliente ObjCliente = new Cliente();
+                                    List<string[]> cliente_list = ObjCliente.Consulta(nome_cliente);
+                                        if(cliente_list.Count != 0){
+                                            foreach(string[] item in cliente_list){
+                                            Console.WriteLine("CNPJ: " + item[0] +
+                                                "\nRazão Social: " + item[1] +
+                                                "\nEmail: " + item[2] +
+                                                "\nTelefone: " + item[3] +
+                                                "\nEndereço: " + item[4] + "\n");
+                                            }
+                                        }
+                                        else{
+                                            Console.WriteLine("Cliente não encontrado.");
+                                        }
                                     break;
 
                                 case 3:
+                                    System.Console.Write("\nNome do cliente: ");
+                                    string nome_fornecedor = (Console.ReadLine());
+                                    Fornecedor ObjFornecedor = new Fornecedor();
+                                    List<string[]> fornecedor_list = ObjFornecedor.Consulta(nome_fornecedor);
+                                        if(fornecedor_list.Count != 0){
+                                            foreach(string[] item in fornecedor_list){
+                                            Console.WriteLine("CNPJ: " + item[0] +
+                                                "\nRazão Social: " + item[1] +
+                                                "\nEmail: " + item[2] +
+                                                "\nTelefone: " + item[3] +
+                                                "\nEndereço: " + item[4] + "\n");
+                                            }
+                                        }
+                                        else{
+                                            Console.WriteLine("Fornecedor não encontrado.");
+                                        }
                                     break;
 
                                 case 9:
