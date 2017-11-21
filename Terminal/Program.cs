@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Dominio;
 using Dominio.ClasseFilha;
 
@@ -130,16 +131,23 @@ namespace Terminal
                             System.Console.WriteLine("9 - Voltar\n");
 
                             opcaoConsultar = Convert.ToInt16(Console.ReadLine());
-                            string resultado = "";
-
+                            
                             switch (opcaoConsultar)
                             {
                                 case 1:
-                                    System.Console.Write("\nData: ");
-                                    DateTime datas = Convert.ToDateTime(Console.ReadLine());
+                                    System.Console.Write("\nNome: ");
+                                    string nome = (Console.ReadLine());
                                     Vendas ObjVenda = new Vendas();
-                                    resultado = ObjVenda.Consulta(datas);
-                                    System.Console.WriteLine("\n" + resultado);  
+                                    List<string[]> resultado_list = ObjVenda.Consulta(nome);
+                                    foreach(string[] item in resultado_list){
+                                        Console.WriteLine("Produto: " + item[0] +
+                                            "\nVolume: " + item[1] +
+                                            "\nValor: " + item[2] +
+                                            "\nData do cadastro: " + item[3] +
+                                            "\nCliente: " + item[4] + "\n");
+                                    }
+                                    
+                                    //System.Console.WriteLine("\n" + resultado);
                                     break;
 
                                 case 2:

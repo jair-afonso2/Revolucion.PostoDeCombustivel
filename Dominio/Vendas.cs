@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -20,6 +21,10 @@ namespace Dominio
             this.Valor = Valor;
             this.Data = Data;
             this.Cliente = Cliente;
+        }
+        public Vendas()
+        {
+            
         } 
         
         public string Cadastro()
@@ -58,17 +63,38 @@ namespace Dominio
                 while((linha = ler.ReadLine()) != null){
                     string[] dados = linha.Split(';');
                     if(dados[0].ToUpper() == Produto.ToUpper()){
-                        resultado = "Produto: " + linha[0] +
-                                    "\nVolume: " + linha[1] +
-                                    "\nValor: " + linha[2] +
-                                    "\nData do cadastro: " + linha[3] +
-                                    "\nCliente: " + linha[4] ;
+                        resultado = "Produto: " + dados[0] +
+                                    "\nVolume: " + dados[1] +
+                                    "\nValor: " + dados[2] +
+                                    "\nData do cadastro: " + dados[3] +
+                                    "\nCliente: " + dados[4];
                         break;
                     }
                 }
             }
             catch(Exception ex){
                 resultado = "Erro ao tentar ler o arquivo." + ex.Message;
+            }
+            finally{
+                ler.Close();
+            }
+            return resultado;
+        }
+        public List<string[]> Consulta(string nome){
+            List<string[]> resultado = new List<string[]>();
+            StreamReader ler = null;
+            try{
+                ler = new StreamReader("Vendas.csv", Encoding.Default);
+                string linha = "";
+                while((linha = ler.ReadLine()) != null){
+                    string[] dados = linha.Split(';');
+                    if(dados[4] == nome){
+                        resultado.Add(dados);
+                    }
+                }
+            }
+            catch(Exception ex){
+                string erro = "Erro ao tentar ler o arquivo." + ex.Message;
             }
             finally{
                 ler.Close();
