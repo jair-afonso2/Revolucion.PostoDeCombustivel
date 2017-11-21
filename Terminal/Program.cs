@@ -189,18 +189,12 @@ namespace Terminal
                                         }
                                     break;
 
-                                case 9:
-                                    break;
-
                                 default:
                                     System.Console.WriteLine("Opção inválida.\n");
                                     break;
                             }
 
                         } while (opcaoConsultar != 9);
-                        break;
-
-                    case 9:
                         break;
 
                     default:
