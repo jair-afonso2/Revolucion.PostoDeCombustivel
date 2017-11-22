@@ -1,0 +1,16 @@
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.csproj.CoreCompileInputs.cache
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfoInputs.cache
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfo.cs
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Dominio\bin\Debug\netstandard2.0\Dominio.deps.json
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Dominio\bin\Debug\netstandard2.0\Dominio.dll
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Dominio\bin\Debug\netstandard2.0\Dominio.pdb
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.dll
+c:\Users\37795527876\backend\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.pdb
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\Dominio\bin\Debug\netstandard2.0\Dominio.deps.json
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\Dominio\bin\Debug\netstandard2.0\Dominio.dll
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\Dominio\bin\Debug\netstandard2.0\Dominio.pdb
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfo.cs
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.dll
+C:\Users\38141419897\Desktop\Revolucion.PostoDeCombustivel\Dominio\obj\Debug\netstandard2.0\Dominio.pdb
