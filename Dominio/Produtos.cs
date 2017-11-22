@@ -8,15 +8,13 @@ namespace Dominio
     {
         public string produto { get; set; }
         public double preco { get; set; }
-        public int estoque { get; set; }
 
         public Produtos()
         {}
-        public Produtos(string produto, double preco, int estoque)
+        public Produtos(string produto, double preco)
         {
             this.produto = produto;
             this.preco = preco;
-            this.estoque = estoque;
         }
 
         public string Cadastro()
@@ -26,12 +24,12 @@ namespace Dominio
             string composicao = "";
             try
             {
-                composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque: " + estoque;
+                composicao = "Produto: " + produto + "\nPreço: " + preco;
                 if(arquivo==null)
                 {
-                    arquivo.WriteLine("Nome do Produto;Preço;Estoque");
+                    arquivo.WriteLine("Nome do Produto;Preço");
                 }
-                arquivo.WriteLine(produto + ";" + preco + ";" + estoque);
+                arquivo.WriteLine(produto + ";" + preco);
                 msg = "Produto salvo com sucesso!";
             }
             catch(Exception ex)
@@ -61,7 +59,6 @@ namespace Dominio
                     {
                         produto = dados[0];
                         preco = Convert.ToDouble(dados[1]);
-                        estoque = Convert.ToInt16(dados[2]);
                         msg = "Pesquisa concluída com sucesso!";
                         break;
                     }
@@ -76,7 +73,7 @@ namespace Dominio
                 arquivo.Close();
             }
             
-            composicao = "Produto: " + produto + "\nPreço: " + preco + "\nQuantidade em Estoque: " + estoque;
+            composicao = "Produto: " + produto + "\nPreço: " + preco;
             Console.WriteLine(msg);
             return composicao;
         }

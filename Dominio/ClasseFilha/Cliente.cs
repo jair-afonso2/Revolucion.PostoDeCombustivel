@@ -21,7 +21,7 @@ namespace Dominio.ClasseFilha
         public string Cadastro()
         {
             var cl_arquivo = new StreamWriter("clientes.csv", true, Encoding.Default);
-            string msg = "";
+            string composicao = "";
             string linha_cliente = "";
             try{
                 if(new FileInfo("clientes.csv").Length == 0){
@@ -32,7 +32,7 @@ namespace Dominio.ClasseFilha
 
                 cl_arquivo.WriteLine(linha_cliente);
 
-                msg = "Cadastro efetuado." + 
+                composicao = "Cadastro efetuado." + 
                         "\nCNPJ: " + this.Cnpj + 
                         "\nRazão Social: " + this.RazaoSocial + 
                         "\nEmail: " + this.Email + 

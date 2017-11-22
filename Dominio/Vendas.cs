@@ -20,8 +20,12 @@ namespace Dominio
             this.Valor = Valor;
             this.Data = Data;
             this.Cliente = Cliente;
-        } 
-        
+        }
+
+        public Vendas()
+        {
+        }
+
         public string Cadastro()
         {
             string efetuado = "";
@@ -47,9 +51,9 @@ namespace Dominio
             return efetuado;
         }
 
-        public string Consulta()
+        public string Consulta(string Produto)
         {
-            string resultado = "Título não encontrado.";
+            string resultado = "Produto não encontrado.";
             StreamReader ler = null;
             try
             {
@@ -58,11 +62,11 @@ namespace Dominio
                 while((linha = ler.ReadLine()) != null){
                     string[] dados = linha.Split(';');
                     if(dados[0].ToUpper() == Produto.ToUpper()){
-                        resultado = "Produto: " + linha[0] +
-                                    "\nVolume: " + linha[1] +
-                                    "\nValor: " + linha[2] +
-                                    "\nData do cadastro: " + linha[3] +
-                                    "\nCliente: " + linha[4] ;
+                        resultado = "Produto: " + dados[0] +
+                                    "\nVolume: " + dados[1] +
+                                    "\nValor: " + dados[2] +
+                                    "\nData do cadastro: " + dados[3] +
+                                    "\nCliente: " + dados[4] ;
                         break;
                     }
                 }
@@ -74,6 +78,40 @@ namespace Dominio
                 ler.Close();
             }
             return resultado;
+        }
+
+        public string Consulta(DateTime data)
+        {
+            string resultado = "Data não encontrada.";
+            StreamReader ler = null;
+            try
+            {
+                ler = new StreamReader("Vendas.csv", Encoding.Default);
+                string linha = "";
+                while((linha = ler.ReadLine()) != null){
+                    string[] dados = linha.Split(';');
+                    if(dados[3].Contains(data.ToShortDateString())){
+                        resultado = "Produto: " + dados[0] +
+                                    "\nVolume: " + dados[1] +
+                                    "\nValor: " + dados[2] +
+                                    "\nData do cadastro: " + dados[3] +
+                                    "\nCliente: " + dados[4] ;
+                        break;
+                    }
+                }
+            }
+            catch(Exception ex){
+                resultado = "Erro ao tentar ler o arquivo." + ex.Message;
+            }
+            finally{
+                ler.Close();
+            }
+            return resultado;
+        }
+
+        public string Consulta()
+        {
+            throw new NotImplementedException();
         }
     }   
 }
